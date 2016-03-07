@@ -3,6 +3,8 @@ About qutip
 
 Home: http://qutip.org
 
+GitHub: https://github.com/qutip/qutip
+
 Package license: BSD
 
 Feedstock license: BSD
