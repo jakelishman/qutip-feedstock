@@ -13,15 +13,15 @@ source:
 
 build:
     number: 0
-    script: $PYTHON setup.py install
-    skip: True       # [win and py3k]
+    script: $PYTHON setup.py install  # [unix]
+    skip: True                        # [win and py3k]
 
 requirements:
   build:
     - python
     - cython >=0.15
     - numpy x.x
-    - mingwpy        # [win]
+    - mingwpy                         # [win]
     
   run:
     - python
