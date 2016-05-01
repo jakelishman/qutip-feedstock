@@ -3,11 +3,9 @@ About qutip
 
 Home: http://qutip.org
 
-GitHub: https://github.com/qutip/qutip
-
 Package license: BSD
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: QuTiP is open-source software for simulating the dynamics of open quantum systems and optimal quantum control
 
@@ -74,6 +72,11 @@ Current build status
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qutip-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/qutip-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/qutip-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qutip-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qutip-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qutip-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/version.svg)](https://anaconda.org/conda-forge/qutip)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/downloads.svg)](https://anaconda.org/conda-forge/qutip)
 
 
 Updating qutip-feedstock
