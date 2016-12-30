@@ -18,7 +18,7 @@ requirements:
   build:
     - python
     - setuptools
-    - cython >=0.15
+    - cython >=0.21
     - numpy x.x
     - mingwpy                         # [win]
     
@@ -26,8 +26,8 @@ requirements:
     - python
     - setuptools
     - numpy x.x
-    - scipy >=0.14
-    - cython >=0.15
+    - scipy >=0.15
+    - cython >=0.21
     - mingwpy                         # [win]
     
 test:
