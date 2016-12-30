@@ -20,6 +20,7 @@ requirements:
     - setuptools
     - cython >=0.21
     - numpy x.x
+    - scipy >=0.15
     - mingwpy                         # [win]
     
   run:
