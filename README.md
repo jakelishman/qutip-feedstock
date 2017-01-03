@@ -11,6 +11,18 @@ Summary: QuTiP is open-source software for simulating the dynamics of open quant
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qutip-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qutip-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/qutip-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qutip-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qutip-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qutip-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/version.svg)](https://anaconda.org/conda-forge/qutip)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/downloads.svg)](https://anaconda.org/conda-forge/qutip)
+
 Installing qutip
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `qutip` available on your platform
 ```
 conda search qutip --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qutip-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qutip-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/qutip-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qutip-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qutip-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qutip-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/version.svg)](https://anaconda.org/conda-forge/qutip)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qutip/badges/downloads.svg)](https://anaconda.org/conda-forge/qutip)
 
 
 Updating qutip-feedstock

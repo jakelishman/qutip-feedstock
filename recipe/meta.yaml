@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "4.0.2" %}
 
 package:
     name: qutip
@@ -7,27 +7,30 @@ package:
 source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: 078399c9830c011ec189db222fcd45f71d2a135800874784d8386d67b4357402
-    patches:
-      - qutip__init__.patch
+    sha256: 1bda0b0c2730d76d87d2a9bf15cacf0393afa78d4156a5b6086c338515edc756
 
 build:
     number: 0
     script: $PYTHON setup.py install  # [unix]
-    skip: True                        # [win and py3k]
+    skip: True                        # [win and py35]
 
 requirements:
   build:
     - python
-    - cython >=0.15
+    - setuptools
+    - cython >=0.21
     - numpy x.x
+    - scipy >=0.15
     - mingwpy                         # [win]
     
   run:
     - python
+    - setuptools
     - numpy x.x
-    - scipy >=0.14
-
+    - scipy >=0.15
+    - cython >=0.21
+    - mingwpy                         # [win]
+    
 test:
   imports:
     - qutip
@@ -40,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - ajgpitch
+    - sahmed95
