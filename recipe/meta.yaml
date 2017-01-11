@@ -7,10 +7,10 @@ package:
 source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: 1bda0b0c2730d76d87d2a9bf15cacf0393afa78d4156a5b6086c338515edc756
+    sha256: 5629b24e568f7b77debd42eda6eed44c34463e6a78d8511d02d6df3d7689a030
 
 build:
-    number: 0
+    number: 1
     script: $PYTHON setup.py install  # [unix]
     skip: True                        # [win and py35]
 
