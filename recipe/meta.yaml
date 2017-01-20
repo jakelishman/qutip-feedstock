@@ -10,7 +10,7 @@ source:
     sha256: 5629b24e568f7b77debd42eda6eed44c34463e6a78d8511d02d6df3d7689a030
 
 build:
-    number: 1
+    number: 2
     script: $PYTHON setup.py install  # [unix]
     skip: True                        # [win and py35]
 
