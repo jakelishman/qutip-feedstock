@@ -1,4 +1,4 @@
-{% set version = "4.0.2" %}
+{% set version = "4.1.0" %}
 
 package:
     name: qutip
@@ -7,21 +7,23 @@ package:
 source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: 5629b24e568f7b77debd42eda6eed44c34463e6a78d8511d02d6df3d7689a030
+    sha256: b41963d33662121d3f996c5c4f8f28a63c5253d5ffb3f4e1a4e88d84e213b006
 
 build:
-    number: 2
+    number: 0
     script: $PYTHON setup.py install  # [unix]
-    skip: True                        # [win and py35]
+    # ajgpitch 2017-03-16: win py27 build currently failing due to error on import scipy.misc
+    skip: True                        # [win and py2k]
 
 requirements:
   build:
     - python
     - setuptools
-    - cython >=0.21
     - numpy x.x
+    - cython >=0.21
     - scipy >=0.15
-    - mingwpy                         # [win]
+#    - mingwpy                         # [win and py2k]
+    - toolchain
     
   run:
     - python
@@ -29,7 +31,7 @@ requirements:
     - numpy x.x
     - scipy >=0.15
     - cython >=0.21
-    - mingwpy                         # [win]
+#    - mingwpy                         # [win and py2k]
     
 test:
   imports:
@@ -44,3 +46,4 @@ extra:
   recipe-maintainers:
     - ajgpitch
     - sahmed95
+    - nonhermitian
