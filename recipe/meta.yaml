@@ -10,7 +10,7 @@ source:
     sha256: aa31e18bfa33ca740eb57fb02cf726ec3b4718443e15b60512c261f550dc8aa2
 
 build:
-    number: 1
+    number: 0
     script: $PYTHON setup.py install  # [unix]
     # ajgpitch 2017-03-16: win py27 build currently failing due to error on import scipy.misc
     # Trying again on a new build
