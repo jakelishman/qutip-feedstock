@@ -7,10 +7,10 @@ package:
 source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: aa31e18bfa33ca740eb57fb02cf726ec3b4718443e15b60512c261f550dc8aa2
+    sha256: 87d677c6450a17a4dd8cfa1c7ae5f1f7646c47b63dab5abd88980093a47611e5
 
 build:
-    number: 1
+    number: 2
     script: $PYTHON setup.py install  # [unix]
     # ajgpitch 2017-03-16: win py27 build currently failing due to error on import scipy.misc
     # Trying again on a new build
@@ -23,7 +23,6 @@ requirements:
     - numpy x.x
     - cython >=0.21
     - scipy >=0.15
-    - mingwpy                         # [win and py2k]
     - toolchain
     
   run:
@@ -32,7 +31,6 @@ requirements:
     - numpy x.x
     - scipy >=0.15
     - cython >=0.21
-    - mingwpy                         # [win and py2k]
     
 test:
   imports:
