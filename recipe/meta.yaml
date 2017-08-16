@@ -8,8 +8,11 @@ source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
     sha256: 6db67ca5eb720e2cf5fb9651430c0d62a46198e2fe0c42c8d56ef11e2fc48cc6
+    # This log of builds should be maintained in case previous versions ever need to be rebuilt.
+    # It should show the last build number and corresponding sha256 for the last minor release,
+    # which should match that of the tarbar of the version on the download url
     #v4.1.0 build 2: sha256: b41963d33662121d3f996c5c4f8f28a63c5253d5ffb3f4e1a4e88d84e213b006
-    #v4.2.0 build 2: sha256: 87d677c6450a17a4dd8cfa1c7ae5f1f7646c47b63dab5abd88980093a47611e5
+    #v4.2.0 build 3: sha256: 6db67ca5eb720e2cf5fb9651430c0d62a46198e2fe0c42c8d56ef11e2fc48cc6
 
 build:
     number: 3
