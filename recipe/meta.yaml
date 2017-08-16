@@ -7,12 +7,12 @@ package:
 source:
     fn: qutip-{{ version }}.tar.gz
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: 87d677c6450a17a4dd8cfa1c7ae5f1f7646c47b63dab5abd88980093a47611e5
+    sha256: 6db67ca5eb720e2cf5fb9651430c0d62a46198e2fe0c42c8d56ef11e2fc48cc6
     #v4.1.0 build 2: sha256: b41963d33662121d3f996c5c4f8f28a63c5253d5ffb3f4e1a4e88d84e213b006
     #v4.2.0 build 2: sha256: 87d677c6450a17a4dd8cfa1c7ae5f1f7646c47b63dab5abd88980093a47611e5
 
 build:
-    number: 2
+    number: 3
     script: $PYTHON setup.py install  # [unix]
     # ajgpitch 2017-03-16: win py27 build currently failing due to error on import scipy.misc
     # ajgpitch 2017-07-28: decided to give up on win py2k build until further notice
