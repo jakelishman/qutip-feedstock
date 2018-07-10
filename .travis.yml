@@ -8,16 +8,10 @@ osx_image: xcode6.4
 
 env:
   matrix:
-    
-    - CONDA_NPY=111  CONDA_PY=27
-    - CONDA_NPY=112  CONDA_PY=27
-    - CONDA_NPY=113  CONDA_PY=27
-    - CONDA_NPY=111  CONDA_PY=35
-    - CONDA_NPY=112  CONDA_PY=35
-    - CONDA_NPY=113  CONDA_PY=35
-    - CONDA_NPY=111  CONDA_PY=36
-    - CONDA_NPY=112  CONDA_PY=36
-    - CONDA_NPY=113  CONDA_PY=36
+    - CONFIG=osx_python2.7
+    - CONFIG=osx_python3.5
+    - CONFIG=osx_python3.6
+
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "qkIGvyI2pcaxtR7RxctXJOPyERS2WcdW4oUinz2m8WUu1C1JRPFr//YawnOhVYUYqywrFLqIC8KOpFjRbU/WaN+tz/GvaUTH/VENcnYzJI3vH7YIPwic4H0qTdQtWipQY+8KIdFSClsV86eTaxhDciooECOlXZCpiMf0TJrw9HHquJv7zD9ctwp82d7Fsh3lAyVlQWD16EiQhlmVjz5OXasAJBMQY3tv19F7uyaGUUxgjUVCzORExBG349a9uFVIauzFvl8NAiGWgzOZaiMIBGtmzZlu7wy1GzDVAeQywcKOiakzD4Pt9Lazu6ehkPlVIHG+BAn7wqMDt4vvG1rKTH6V9EtRqoLryGaq8IMUZGl1rcki/TG9LgOeAIGMI+dnmWxmWCToC/uuMkuIOiXbzfOmoVqv9UdM3svYzA4A6+zHr8N3rC2mv72eU+SGRDuJKqNtnEyCEi5KhjdrnWx+q3LExUXQQDvO22o7bTlDpOBycNc4erdASE779rLXmBMgWLpbYzlaDcXOltuXk9ak2EdZ9XoC23ra2lvfY4Sy98SiSLVHDQasw2FT5ZzWR+Tpo0q3PP4RqXCw6ISWL5vC2mgJTwy6hXVw4pJdvATcUoafLmJX+EEWDzXa3HhfkWMPEc4KI0JvbunNR9i9yEiR5n6Y2TxOplkNRZB0bA01w+E="
@@ -26,7 +20,7 @@ env:
 before_install:
     # Fast finish the PR.
     - |
-      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
     # Remove homebrew.
@@ -58,10 +52,10 @@ install:
       conda config --add channels defaults
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
-      conda install --yes --quiet conda-forge-build-setup
+      conda install --yes --quiet conda-forge-ci-setup=1
       source run_conda_forge_build_setup
 
 script:
-  - conda build ./recipe
+  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe conda-forge --channel=main
+  - upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./.ci_support/${CONFIG}.yaml
