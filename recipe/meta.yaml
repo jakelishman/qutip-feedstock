@@ -12,7 +12,7 @@ source:
     #v4.2.0 build 2: sha256: 87d677c6450a17a4dd8cfa1c7ae5f1f7646c47b63dab5abd88980093a47611e5
 
 build:
-    number: 1
+    number: 1001
     script: python -m pip install --no-deps --ignore-installed . --verbose  # [unix]
     # ajgpitch 2017-03-16: win py27 build currently failing due to error on import scipy.misc
     # ajgpitch 2017-07-28: decided to give up on win py2k build until further notice
