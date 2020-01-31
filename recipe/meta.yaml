@@ -1,4 +1,4 @@
-{% set version = "4.4.1" %}
+{% set version = "4.5.0" %}
 
 package:
     name: qutip
@@ -6,7 +6,7 @@ package:
 
 source:
     url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
-    sha256: 3d59a7c67a69617e8222e013a7ed3223870a46855a1a43ab14d97f493a614408
+    sha256: b822f3ce0e6c215fa8666e5ef92ad9c6f98406ae99d7c9ab3f2f9558d6d79a26
 
 build:
     number: 0
@@ -42,6 +42,7 @@ about:
 extra:
   recipe-maintainers:
     - ajgpitch
-    - sahmed95
+    - quantshah
+    - nathanshammah
     - nonhermitian
     - ericgig
