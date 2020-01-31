@@ -16,7 +16,7 @@ Current build status
 
 
 <table>
-    
+
   <tr>
     <td>Azure</td>
     <td>
@@ -200,5 +200,6 @@ Feedstock Maintainers
 * [@ajgpitch](https://github.com/ajgpitch/)
 * [@ericgig](https://github.com/ericgig/)
 * [@nonhermitian](https://github.com/nonhermitian/)
-* [@sahmed95](https://github.com/sahmed95/)
+* [@quantshah](https://github.com/quantshah/)
+* [@nathanshammah](https://github.com/nathanshammah/)
 
