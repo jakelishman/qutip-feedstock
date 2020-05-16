@@ -5,7 +5,7 @@ package:
     version: {{ version }}
 
 source:
-    url: http://qutip.org/downloads/{{ version }}/qutip-{{ version }}.tar.gz
+    url: https://github.com/qutip/qutip/releases/download/v{{ version }}/qutip-{{ version }}.tar.gz
     sha256: 687e216aaeafdbbc47b61d7b210c0f07206e73c28afd987473cf6b292a6101cb
 
 build:
