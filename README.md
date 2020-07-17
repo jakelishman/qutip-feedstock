@@ -5,7 +5,7 @@ Home: http://qutip.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: QuTiP is open-source software for simulating the dynamics of open quantum systems and optimal quantum control
 
